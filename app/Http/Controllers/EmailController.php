@@ -27,7 +27,7 @@ class EmailController extends Controller
 
 
         Mail::to($data['address'])->send(new SendEmailClient($data));
-        Mail::to(env('MAIL_FROM_ADDRESS'))->send(new SendEmailOwner($data));
+        // Mail::to(env('MAIL_FROM_ADDRESS'))->send(new SendEmailOwner($data));
 
         return response()->json(['success', 'Emails sended']);
     }

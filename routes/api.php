@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\EmailController;
-use App\Http\Controllers\SendEmailController;
 use Illuminate\Support\Facades\Route;
 
 /*
