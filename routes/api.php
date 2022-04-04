@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\EmailController;
+use App\Http\Controllers\EmailServiceController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,3 +20,4 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::post('/email', [EmailController::class, 'sendEmail']);
+Route::post('/email-service', [EmailServiceController::class, 'sendEmailService']);

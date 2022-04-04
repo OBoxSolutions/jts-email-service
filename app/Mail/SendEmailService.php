@@ -3,10 +3,11 @@
 namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
+use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class SendEmailClient extends Mailable
+class SendEmailService extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -29,8 +30,7 @@ class SendEmailClient extends Mailable
      */
     public function build()
     {
-
         return $this->subject($this->data['subject'])
-                    ->view('emails.client');
+        ->view('emails.service');
     }
 }
