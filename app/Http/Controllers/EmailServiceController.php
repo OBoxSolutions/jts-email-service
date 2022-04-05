@@ -34,10 +34,10 @@ class EmailServiceController extends Controller
             }
 
             SendEmailServiceJob::dispatch($data)->delay(Carbon::now()->addSecond(1));
-            return response()->json(['success', 'Email sended']);
+            return response()->json(['success', 'Email sended'], 200);
         }
         else{
-            return response()->json(['failure', 'Incorrect Token! Permission Denied!']);
+            return response()->json(['failure', 'Incorrect Token! Permission Denied!'], 403);
         }
     }
 }
